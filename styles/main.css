@@ -1,0 +1,108 @@
+:root {
+  --papaya: #ff8700;
+  --papaya-light: #ffa94d;
+  --dark: #111;
+  --charcoal: #1c1c1c;
+  --gray: #2e2e2e;
+  --light: #f5f5f5;
+  --success: #00c853;
+  --danger: #ff3d00;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background: var(--dark);
+  color: var(--light);
+  line-height: 1.6;
+}
+
+header {
+  background: var(--charcoal);
+  padding: 1rem;
+}
+
+nav ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+
+nav a {
+  color: var(--papaya);
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: var(--papaya-light);
+  transition: 0.3s ease;
+}
+
+main {
+  padding: 1rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+.card {
+  background: var(--gray);
+  padding: 1rem;
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+input, button, select {
+  padding: 0.6rem;
+  border-radius: 4px;
+  border: none;
+  width: 100%;
+}
+
+button {
+  background: var(--papaya);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--papaya-light);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 0.75rem;
+  border-bottom: 1px solid var(--gray);
+}
+
+th {
+  cursor: pointer;
+  background: var(--charcoal);
+}
+
+mark {
+  background: var(--papaya);
+  color: black;
+}
+
+@media (min-width: 768px) {
+  nav ul {
+    justify-content: center;
+  }
+}

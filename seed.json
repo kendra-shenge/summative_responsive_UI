@@ -1,0 +1,11 @@
+[
+  {
+    "id": "rec_1",
+    "title": "Study Math",
+    "dueDate": "2026-02-20",
+    "duration": "120",
+    "tag": "Academic",
+    "createdAt": "2026-02-01",
+    "updatedAt": "2026-02-01"
+  }
+]

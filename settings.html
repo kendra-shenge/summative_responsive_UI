@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Settings</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+
+<a href="#main" class="skip-link">Skip to content</a>
+
+<header>
+  <nav aria-label="Main navigation">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="planner.html">Planner</a></li>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="settings.html" aria-current="page">Settings</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main">
+  <section class="card">
+    <h1>Settings</h1>
+
+    <label for="cap">Weekly Duration Cap (minutes)</label>
+    <input id="cap" type="number">
+
+    <button onclick="localStorage.setItem('cap', document.getElementById('cap').value)">
+      Save Cap
+    </button>
+  </section>
+</main>
+
+<footer>
+  <p>© 2026 Campus Life Planner</p>
+</footer>
+
+</body>
+</html>
