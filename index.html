@@ -25,6 +25,67 @@
 
 <main id="main">
   <section class="card">
+    <h1>Add New Task</h1>
+
+    <form id="planner-form" novalidate>
+      <label for="title">Title</label>
+      <input id="title" name="title" required>
+      <small class="error" id="title-error"></small>
+
+      <label for="dueDate">Due Date</label>
+      <input type="date" id="dueDate" name="dueDate" required>
+      <small class="error" id="date-error"></small>
+
+      <label for="duration">Duration (minutes)</label>
+      <input id="duration" name="duration" required>
+      <small class="error" id="duration-error"></small>
+
+      <label for="tag">Tag</label>
+      <input id="tag" name="tag" required>
+      <small class="error" id="tag-error"></small>
+
+      <button type="submit">Add Task</button>
+    </form>
+  </section>
+
+  
+  <section class="card">
+    <h2>Regex Search</h2>
+    <label for="search">Search Pattern</label>
+    <input id="search" placeholder="Enter regex pattern">
+  </section>
+
+  
+  <section class="card">
+    <h2>Tasks</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th data-sort="title">Title</th>
+          <th data-sort="dueDate">Date</th>
+          <th data-sort="duration">Duration</th>
+          <th data-sort="tag">Tag</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="records"></tbody>
+    </table>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="card">
+    <h2>Statistics</h2>
+    <p>Total Tasks: <span id="total"></span></p>
+    <p>Total Duration: <span id="sum"></span></p>
+    <p id="live-region" role="status" aria-live="polite"></p>
+  </section>
+
+  <section class="card">
+    <h1>Dashboard</h1>
+    <p>Tasks in last 7 days: <strong id="last7"></strong></p>
+  </section>
+  <section class="card">
     <h1>Campus Life Planner</h1>
     <p>
       Organize your academic tasks, track study time, and manage deadlines efficiently.
@@ -38,6 +99,6 @@
 <footer>
   <p>© 2026 Campus Life Planner</p>
 </footer>
-
+<script type="module" src="ui.js"></script>
 </body>
 </html>

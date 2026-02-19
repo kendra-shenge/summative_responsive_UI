@@ -12,11 +12,9 @@ const sumEl = document.querySelector("#sum");
 
 function render() {
   const regex = compileRegex(searchInput.value);
-
-  let filtered = state.records.filter(r =>
+  const filtered = state.records.filter(r =>
     !regex || regex.test(r.title) || regex.test(r.tag)
   );
-
   renderTable(filtered, regex, tableBody);
   updateStats(filtered, totalEl, sumEl);
 }
@@ -55,4 +53,5 @@ tableBody?.addEventListener("click", e => {
 
 searchInput?.addEventListener("input", render);
 
+// Initial render
 render();

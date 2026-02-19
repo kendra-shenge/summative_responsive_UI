@@ -1,7 +1,12 @@
 const KEY = "campus:data";
 
 export function loadData() {
-  return JSON.parse(localStorage.getItem(KEY)) || [];
+  try {
+    const data = JSON.parse(localStorage.getItem(KEY));
+    return Array.isArray(data) ? data : [];
+  } catch {
+    return [];
+  }
 }
 
 export function saveData(data) {

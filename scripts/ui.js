@@ -1,5 +1,9 @@
 import { highlight } from "./search.js";
 
+/* =========================
+   TABLE RENDERING
+========================= */
+
 export function renderTable(records, regex, container) {
   container.innerHTML = "";
 
@@ -18,8 +22,53 @@ export function renderTable(records, regex, container) {
   });
 }
 
+/* =========================
+   STATS
+========================= */
+
 export function updateStats(records, totalEl, sumEl) {
   totalEl.textContent = records.length;
-  const total = records.reduce((sum, r) => sum + parseFloat(r.duration), 0);
+
+  const total = records.reduce(
+    (sum, r) => sum + parseFloat(r.duration),
+    0
+  );
+
   sumEl.textContent = total;
 }
+
+/* =========================
+   THEME SYSTEM (GLOBAL)
+========================= */
+
+// Apply saved theme immediately
+const savedTheme = localStorage.getItem("theme");
+
+if (savedTheme === "light") {
+  document.documentElement.classList.add("light-theme");
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const toggleBtn = document.getElementById("theme-toggle");
+
+  if (!toggleBtn) return;
+
+  // Set correct button label on load
+  toggleBtn.textContent =
+    document.documentElement.classList.contains("light-theme")
+      ? "Switch to Dark Mode"
+      : "Switch to Light Mode";
+
+  toggleBtn.addEventListener("click", () => {
+    document.documentElement.classList.toggle("light-theme");
+
+    const isLight =
+      document.documentElement.classList.contains("light-theme");
+
+    localStorage.setItem("theme", isLight ? "light" : "dark");
+
+    toggleBtn.textContent = isLight
+      ? "Switch to Dark Mode"
+      : "Switch to Light Mode";
+  });
+});

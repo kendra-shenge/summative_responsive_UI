@@ -6,7 +6,7 @@ export function compileRegex(input, flags = "i") {
   }
 }
 
-export function highlight(text, regex) {
-  if (!regex) return text;
-  return text.replace(regex, match => `<mark>${match}</mark>`);
+export function highlight(text, re) {
+  if (!re) return text;
+  return text.replace(re, match => `<mark>${match}</mark>`);
 }
