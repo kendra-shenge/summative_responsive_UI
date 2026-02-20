@@ -94,8 +94,7 @@ Example task:
   "createdAt": "2026-02-01",
   "updatedAt": "2026-02-01"
 }
-## Demo Video
-Watch the 2–3 min demo video here: [Campus Life Planner Demo](https://docs.google.com/videos/d/1DzPR_CKLCku6vOvZ_nEme0q1FuF7Y-hLk-2O8hMqEgw/edit?usp=sharingk)
-##Deployed Link
-Navigate here :[live web application](https://kendra-shenge.github.io/summative_responsive_UI/)
+ **Demo Video:** [Campus Life Planner Demo](https://docs.google.com/videos/d/1DzPR_CKLCku6vOvZ_nEme0q1FuF7Y-hLk-2O8hMqEgw/edit?usp=sharingk)
+**Deployed Link:** [live web application]https://kendra-shenge.github.io/summative_responsive_UI/)
+
 
