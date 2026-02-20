@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Campus Life Planner</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <header>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="planner.html">Planner</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="settings.html">Settings</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="card">
+      <h1>Add New Task</h1>
+      <form id="planner-form" novalidate>
+        <label for="title">Title</label>
+        <input id="title" name="title" required>
+        <small class="error" id="title-error"></small>
+
+        <label for="dueDate">Due Date</label>
+        <input type="date" id="dueDate" name="dueDate" required>
+        <small class="error" id="date-error"></small>
+
+        <label for="duration">Duration (minutes)</label>
+        <input id="duration" name="duration" required>
+        <small class="error" id="duration-error"></small>
+
+        <label for="tag">Tag</label>
+        <input id="tag" name="tag" required>
+        <small class="error" id="tag-error"></small>
+
+        <button type="submit">Add Task</button>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>Regex Search</h2>
+      <label for="search">Search Pattern</label>
+      <input id="search" placeholder="Enter regex pattern">
+    </section>
+
+    <section class="card">
+      <h2>Tasks</h2>
+      <table>
+        <thead>
+          <tr>
+            <th data-sort="title">Title</th>
+            <th data-sort="dueDate">Date</th>
+            <th data-sort="duration">Duration</th>
+            <th data-sort="tag">Tag</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="records"></tbody>
+      </table>
+    </section>
+
+    <section class="card">
+      <h2>Statistics</h2>
+      <p>Total Tasks: <span id="total"></span></p>
+      <p>Total Duration: <span id="sum"></span></p>
+      <p id="live-region" role="status" aria-live="polite"></p>
+    </section>
+
+    <section class="card">
+      <h1>Dashboard</h1>
+      <p>Tasks in last 7 days: <strong id="last7"></strong></p>
+    </section>
+
+    <section class="card">
+      <h1>Campus Life Planner</h1>
+      <p>Organize your academic tasks, track study time, and manage deadlines efficiently.</p>
+      <p>Use the Planner to add tasks, Dashboard to view stats, and Settings to manage limits.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Campus Life Planner</p>
+  </footer>
+
+  <script src="styles/main.css"></script>
+</body>
+</html>

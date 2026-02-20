@@ -1,0 +1,8 @@
+<script type="module" src="scripts/planner.js">
+import { patterns } from "./scripts/validators.js";
+
+console.assert(patterns.title.test("Valid Title"));
+console.assert(!patterns.title.test("  leading space"));
+console.assert(patterns.duplicateWord.test("hello hello"));
+console.log("Regex tests passed");
+</script>

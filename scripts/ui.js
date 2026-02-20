@@ -1,8 +1,6 @@
 import { highlight } from "./search.js";
+// ui.js
 
-/* =========================
-   TABLE RENDERING
-========================= */
 
 export function renderTable(records, regex, container) {
   container.innerHTML = "";

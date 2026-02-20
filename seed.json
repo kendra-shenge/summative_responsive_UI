@@ -7,5 +7,23 @@
     "tag": "Academic",
     "createdAt": "2026-02-01",
     "updatedAt": "2026-02-01"
+  },
+  {
+    "id": "rec_2",
+    "title": "Gym Session",
+    "dueDate": "2026-02-18",
+    "duration": "60",
+    "tag": "Fitness",
+    "createdAt": "2026-02-02",
+    "updatedAt": "2026-02-02"
+  },
+  {
+    "id": "rec_3",
+    "title": "Team Project Meeting",
+    "dueDate": "2026-02-22",
+    "duration": "90",
+    "tag": "Work",
+    "createdAt": "2026-02-03",
+    "updatedAt": "2026-02-03"
   }
 ]
